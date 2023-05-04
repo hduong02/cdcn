@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="Jug_scaled" size="1.000000 1.264198" />
+    <ImageTarget name="frontpage_scaled" size="1.000000 1.250305" />
+    <ImageTarget name="Zebra_scaled" size="1.000000 1.259533" />
+    <ImageTarget name="Yacht_scaled" size="1.000000 1.259533" />
+    <ImageTarget name="Xylophone_scaled" size="1.000000 1.273632" />
+    <ImageTarget name="Watermelon_scaled" size="1.000000 1.275218" />
+    <ImageTarget name="Violin_scaled" size="1.000000 1.276808" />
+    <ImageTarget name="Umbrella_scaled" size="1.000000 1.278402" />
+    <ImageTarget name="Tiger_scaled" size="1.000000 1.278402" />
+    <ImageTarget name="Ship_scaled" size="1.000000 1.247259" />
+    <ImageTarget name="Rabbit_scaled" size="1.000000 1.276808" />
+    <ImageTarget name="Queen_scaled" size="1.000000 1.242718" />
+    <ImageTarget name="Parrot_scaled" size="1.000000 1.275218" />
+    <ImageTarget name="Orange_scaled" size="1.000000 1.265760" />
+    <ImageTarget name="Nest_scaled" size="1.000000 1.268897" />
+    <ImageTarget name="Mango_scaled" size="1.000000 1.257985" />
+    <ImageTarget name="Lion_scaled" size="1.000000 1.264198" />
+    <ImageTarget name="Kite_scaled" size="1.000000 1.268897" />
+    <ImageTarget name="Ice_Cream_scaled" size="1.000000 1.276808" />
+    <ImageTarget name="Horse_scaled" size="1.000000 1.265760" />
+    <ImageTarget name="Grapes_scaled" size="1.000000 1.264198" />
+    <ImageTarget name="Fruits_scaled" size="1.000000 1.265760" />
+    <ImageTarget name="Elephant_scaled" size="1.000000 1.262639" />
+    <ImageTarget name="Dog_scaled" size="1.000000 1.261084" />
+    <ImageTarget name="Cat_scaled" size="1.000000 1.247259" />
+    <ImageTarget name="Ball_scaled" size="1.000000 1.254902" />
+    <ImageTarget name="A_scaled" size="1.000000 1.247259" />
+  </Tracking>
+</QCARConfig>
