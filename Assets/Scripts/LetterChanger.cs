@@ -7,22 +7,32 @@ using TMPro;
 public class LetterChanger : MonoBehaviour
 {
     public TMP_Text text;
-    private char c;
+    [SerializeField] char letter;
+
     // Start is called before the first frame update
     void Start()
     {
-        RandomText();
+        RandomLetter();
+        changeText();
     }
 
-    private void RandomText()
+    public void RandomLetter()
     {
-        c = (char)('A' + Random.Range(0, 26));
-        text.text = c.ToString();
+        letter = (char)('A' + Random.Range(0, 26));
     }
+
+    private void changeText() {
+        text.text = letter.ToString();
+    }
+
+    public char getLetter() {
+        return letter;
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-
+        changeText();
     }
 }

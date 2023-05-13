@@ -15,6 +15,11 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("LearningScene");
     }
 
+    public void GameScene() 
+    {
+        SceneManager.LoadScene("Game");
+    }
+
     public void QuitApp()
     {
         Application.Quit();

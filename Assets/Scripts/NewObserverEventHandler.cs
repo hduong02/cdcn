@@ -18,9 +18,11 @@ using UnityEngine.UI;
 /// Changes made to this file could be overwritten when upgrading the Vuforia version.
 /// When implementing custom event handler behavior, consider inheriting from this class instead.
 /// </summary>
-public class NewBehaviourScript : MonoBehaviour
+public class NewObserverEventHandler : MonoBehaviour
 {
-    public GameObject TextTargetName;
+    [SerializeField] LetterChanger letterChanger;
+    public GameObject CorectMessage;
+    public GameObject FalseMessage;
     
     public enum TrackingStatusFilter
     {
@@ -53,7 +55,8 @@ public class NewBehaviourScript : MonoBehaviour
 
     protected virtual void Start()
     {
-        TextTargetName.SetActive(false);
+        CorectMessage.SetActive(false);
+        FalseMessage.SetActive(false);
         mObserverBehaviour = GetComponent<ObserverBehaviour>();
         
         if (mObserverBehaviour)
@@ -186,8 +189,20 @@ public class NewBehaviourScript : MonoBehaviour
                 component.enabled = true;
         }
 
-            if (mObserverBehaviour.TargetName == "A_scaled") {
-                TextTargetName.SetActive(true);
+            if (mObserverBehaviour.TargetName == "A_scaled" && letterChanger.getLetter() == 'A') 
+            {
+                CorectMessage.SetActive(true);
+            }
+            else if (mObserverBehaviour.TargetName == "Ball_scaled" && letterChanger.getLetter() == 'B') 
+            {
+                CorectMessage.SetActive(true);
+            } 
+            else if (mObserverBehaviour.TargetName == "Cat_scaled" && letterChanger.getLetter() == 'C') 
+            {
+                CorectMessage.SetActive(true);
+            } else 
+            {
+                FalseMessage.SetActive(true);
             }
 
             Debug.Log(mObserverBehaviour.TargetName + " abc");
@@ -215,7 +230,8 @@ public class NewBehaviourScript : MonoBehaviour
             foreach (var component in canvasComponents)
                 component.enabled = false;
 
-            TextTargetName.SetActive(false);
+            CorectMessage.SetActive(false);
+            FalseMessage.SetActive(false);
         }
 
         OnTargetLost?.Invoke();

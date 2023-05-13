@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LearningScene.unity
     guid: b2488998f177e2545bc431ab02b5a0ea
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: b94fb9f6b0d954e4485589c9c0e89fb2
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
