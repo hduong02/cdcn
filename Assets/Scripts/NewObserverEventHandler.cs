@@ -21,8 +21,18 @@ using UnityEngine.UI;
 public class NewObserverEventHandler : MonoBehaviour
 {
     [SerializeField] LetterChanger letterChanger;
-    public GameObject CorectMessage;
-    public GameObject FalseMessage;
+    [SerializeField] GameObject CorectMessage;
+    [SerializeField] GameObject FalseMessage;
+    private int point = 0;
+    private int turnUsed = 0;
+
+    public int getPoint() {
+        return point;
+    }
+
+    public int getTurnUsed() {
+        return turnUsed;
+    }
     
     public enum TrackingStatusFilter
     {
@@ -192,22 +202,33 @@ public class NewObserverEventHandler : MonoBehaviour
             if (mObserverBehaviour.TargetName == "A_scaled" && letterChanger.getLetter() == 'A') 
             {
                 CorectMessage.SetActive(true);
+                point += 10;
+                turnUsed += 1;
             }
             else if (mObserverBehaviour.TargetName == "Ball_scaled" && letterChanger.getLetter() == 'B') 
             {
                 CorectMessage.SetActive(true);
+                point += 10;
+                turnUsed += 1;
             } 
             else if (mObserverBehaviour.TargetName == "Cat_scaled" && letterChanger.getLetter() == 'C') 
             {
                 CorectMessage.SetActive(true);
-            } else 
+                point += 10;
+                turnUsed += 1;
+            } 
+            else 
             {
                 FalseMessage.SetActive(true);
+                turnUsed += 1;
             }
-
-            Debug.Log(mObserverBehaviour.TargetName + " abc");
+            Invoke("changeLetter", 1);
 
         OnTargetFound?.Invoke();
+    }
+
+    private void changeLetter() {
+        letterChanger.RandomLetter();
     }
 
     protected virtual void OnTrackingLost()
